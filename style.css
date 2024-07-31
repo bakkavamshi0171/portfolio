@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+nav,footer{
+    background-color: rgb(2, 17, 74);
+}
+section{
+    background-color: #092e65;
+}
+main{
+    background-color: #092e65;
+    color: aliceblue;
+}
+.navbar a{
+    font-size: 1.5rem;
+}
+.home .right-home{
+    padding: 100px;
+}
+.home .subrightimg{
+   background-image: linear-gradient(rgb(247, 76, 247), rgb(86, 249, 241), rgb(247, 76, 247) );
+   width:100%;
+   border-radius: 50%;;
+   padding: 10px;
+   box-shadow: 5px 2px 20px 5px rgb(81, 228, 239);
+}
+.home .subrightimg img{ 
+    height:50%;
+    border-radius: 50%;; 
+}
+.button .btn{
+    border-radius:50px;
+    box-shadow: 5px 2px 20px 5px rgb(19, 139, 208);
+}
+.about .btn{
+    border-radius:50px;
+    box-shadow: 5px 2px 20px 5px rgb(19, 139, 208);
+}
+.project-card{
+    display: none;
+    background-color: #0ef;
+    opacity:0.8;
+    left: 0;
+    color:white;
+    position: absolute;
+    bottom: 0;
+    font-size: larger;
+    font-weight: 600;
+    transition: height 0.5s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.project-main{
+    position: relative;
+}
+.project-main img{
+    display: block;
+    transition: transform 0.5s;
+}
+.project-main:hover img{
+    transform: scale(1.05);
+    
+    box-shadow: 5px 2px 20px 5px rgb(81, 228, 239);
+}
+.project-main:hover .project-card{
+    animation-name: downtoup;
+    animation-duration: 1s;
+    display: block;
+    opacity: 0.8;
+}
+
+.subleftthome{
+    animation-name: silderight;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes downtoup {
+    0%{
+        transform: translateY(100px);
+        height: -20%;;
+     
+    }100%{
+        transform: translateY(0px);
+        opacity: 0.8;
+        
+        height:70%;
+        
+    }
+}
+@keyframes silderight {
+    0%{
+        transform: translateX(-100px);
+    }
+    100%{
+        transform: translateX(0px);
+    
+    }
+}
+@media screen and (min-width:320px) and (max-width:780px){
+    .home .right-home{
+        padding: 10px;
+    }   
+}
